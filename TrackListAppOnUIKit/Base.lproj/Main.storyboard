@@ -40,17 +40,45 @@
             </objects>
             <point key="canvasLocation" x="640" y="142"/>
         </scene>
-        <!--View Controller-->
+        <!--Track Details View Controller-->
         <scene sceneID="2Im-AC-qTB">
             <objects>
-                <viewController id="bmE-aF-PnY" sceneMemberID="viewController">
+                <viewController id="bmE-aF-PnY" customClass="TrackDetailsViewController" customModule="TrackListAppOnUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jx8-cC-KUW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-HI-yS5">
+                                <rect key="frame" x="20" y="160" width="374" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3Y-YI-Jtd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="134.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbR-sR-OcC">
+                                        <rect key="frame" x="166.5" y="179.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JPl-El-46c"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OG6-e2-7Kv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c7x-HI-yS5" firstAttribute="leading" secondItem="OG6-e2-7Kv" secondAttribute="leading" constant="20" id="ECE-1k-j4u"/>
+                            <constraint firstItem="c7x-HI-yS5" firstAttribute="top" secondItem="OG6-e2-7Kv" secondAttribute="top" constant="20" id="EIo-tb-fcn"/>
+                            <constraint firstItem="OG6-e2-7Kv" firstAttribute="trailing" secondItem="c7x-HI-yS5" secondAttribute="trailing" constant="20" id="c1Z-AA-NLm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IC7-pg-xtW"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="A3Y-YI-Jtd" id="iCg-kw-TGc"/>
+                        <outlet property="trackNameLabel" destination="xbR-sR-OcC" id="j8R-xJ-ymk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdM-fK-1VZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
